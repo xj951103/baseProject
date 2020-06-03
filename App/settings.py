@@ -22,16 +22,16 @@ class Config:
 class DevelopConfig(Config):
     DEBUG = True
     dbinfo = {
-        "ENGINE": "",
-        "USER": "",
-        "PASSWORD": "",
-        "DRIVER": "",
-        "HOST": "",
-        "PORT": "",
-        "DB": ""
+        "ENGINE": "mysql",
+        "USER": "root",
+        "PASSWORD": "root",
+        "DRIVER": "pymysql",
+        "HOST": "127.0.0.1",
+        "PORT": 3306,
+        "DB": "baseProject"
     }
 
-    SQLALCHEMY_DATABASES_URI = ""
+    SQLALCHEMY_DATABASES_URI = get_db_uri(dbinfo)
 
 
 class TestConfig(Config):
