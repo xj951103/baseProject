@@ -5,7 +5,7 @@ from flask_migrate import MigrateCommand
 
 from App import create_app
 
-env = os.environ.get("flask_env")
+env = os.environ.get("flask_env", "develop")
 
 app = create_app(env)
 
